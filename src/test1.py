@@ -39,7 +39,7 @@ def load_balance():
             client = task[0]  # 获取client
             message = task[1] + "\n"  # 获取url
             clients[index] = client  # 储存client信息
-            threading.Thread(target=task_handler, args=(index, message)).start()  # 处理信息
+            threading.Thread(target=task_handler, args=(index, message)).start()  # 起线程处理信息
 
 
 def task_handler(index, message):
